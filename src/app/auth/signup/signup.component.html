@@ -35,6 +35,8 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="535807003840-he7rmt8pr8h715dpr04rr978rkiaqt7g.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
 	<title>Hakuna Matata Tours Login Page</title>
 	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -69,8 +71,16 @@
 				</form>
             </div>	
         </div>
-		<a routerLink="#" class='btn'>Sign Up with Google</a>
-	    <a routerLink="/auth/login" class='btn signup'>Login</a>
+		
+        <!-- <div class="g-signin2" data-onsuccess="onSignIn"><a routerLink="#" class='btn'>Sign Up with Google</a></div> -->
+    <button 
+      mat-button 
+      *ngIf="!loggedIn"
+      color="warn" 
+      (click)="signInWithGoogle()"> Sign In With Google
+    </button>
+    
+	<a routerLink="/auth/login" class='btn signup'>Login</a>
 	</div>
 	
 </body>
