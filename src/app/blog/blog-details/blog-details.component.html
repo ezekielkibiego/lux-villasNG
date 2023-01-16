@@ -6,15 +6,15 @@
 
 <div class="container-full two" *ngFor="let blog of singleBlog">
     <p class="heading">{{blog.heading | titlecase}}</p>
-    <p class="tag">{{blog.tag_name | lowercase}}</p>
+    <p class="tag">{{blog.tag_name | uppercase}}</p>
 </div>
 
-<!-- <div class="container-full three" *ngFor="let blog of singleBlog">
+<div class="container-full three" *ngFor="let blog of singleBlog">
     <p class="p">{{blog.text1}}</p>
     <p class="x"><img src="{{blog.image}}" alt=""></p>
     <p class="p">{{blog.text2}}</p>
     <p class="p">{{blog.text3}}</p>
-</div> -->
+</div>
 
 <div class="container-full four">
    <p class="text-center"><a routerLink="/blog/blog-list" class="btn btn-ghost">Back to blogs</a></p> 
